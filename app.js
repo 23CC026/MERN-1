@@ -1,10 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const { v4: uuidv4 } = require("uuid");
-
+const cors=require('cors')
 const app = express();
 app.use(express.json()); // Middleware
-
+app.use(cors())
 // MongoDB Connection
 mongoose
   .connect("mongodb+srv://Kavinesh:Kavinesh2006@cluster0.1q4ia.mongodb.net/expense")
